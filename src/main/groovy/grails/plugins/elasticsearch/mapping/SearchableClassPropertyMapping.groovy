@@ -24,7 +24,7 @@ import groovy.transform.CompileStatic
 @CompileStatic
 class SearchableClassPropertyMapping {
 
-    private static final Set<String> SEARCHABLE_MAPPING_OPTIONS = ['boost', 'index', 'analyzer', 'fielddata', 'fields'] as Set<String>
+    private static final Set<String> SEARCHABLE_MAPPING_OPTIONS = ['boost', 'index', 'analyzer', 'search_analyzer', 'fielddata', 'fields'] as Set<String>
 
     private static final Set<String> SEARCHABLE_SPECIAL_MAPPING_OPTIONS =
             ['component', 'converter', 'reference', 'excludeFromAll', 'maxDepth', 'multi_field', 'join', 'geoPoint',

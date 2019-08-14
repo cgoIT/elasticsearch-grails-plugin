@@ -10,6 +10,7 @@
 **** The property `total` in class `grails.plugins.elasticsearch.ElasticSearchResult` is now of type `org.apache.lucene.search.TotalHits`
 *** Make java.time classes usable
 *** Make aggregations usable with this plugin
+*** Support 'search_analyzer' mapping
 
 
 * August 6, 2019
