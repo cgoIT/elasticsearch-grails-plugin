@@ -478,8 +478,8 @@ class ElasticSearchService implements GrailsApplicationAware {
 
         log.debug("Build search request with params: ${params}")
         source.from(params.from ? params.from as int : 0)
-                .size(params.size ? params.size as int : 60)
-                .explain(params.explain ?: true).minScore(params.min_score ?: 0)
+                .size(params.size != null ? params.size as int : 60)
+                .explain(params.explain ?: false).minScore(params.min_score ?: 0)
 
         if (params.sort) {
             def sorters = (params.sort instanceof Collection) ? params.sort : [params.sort]
@@ -517,7 +517,7 @@ class ElasticSearchService implements GrailsApplicationAware {
             source.highlighter highlighter
         }
 
-        source.explain(false)
+        //source.explain(false)
 
         SearchRequest request = new SearchRequest()
         String searchType = params.searchType ?:
