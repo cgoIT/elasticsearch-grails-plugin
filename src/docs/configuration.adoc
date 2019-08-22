@@ -24,7 +24,7 @@ elasticSearch {
   /**
    * Date formats used by the unmarshaller of the JSON responses
    */
-  date.formats = ["yyyy-MM-dd'T'HH:mm:ss'Z'"]
+  date.formats = ["yyyy-MM-dd'T'HH:mm:ss'Z'", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
 
   /**
    * Hosts for remote ElasticSearch instances.
@@ -99,7 +99,7 @@ environments {
 ----
 elasticSearch:
     date:
-        formats: ["yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
+        formats: ["yyyy-MM-dd'T'HH:mm:ss'Z'", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
     client.hosts:
         - {host: localhost, port: 9300}
     defaultExcludedProperties: ['password']

@@ -2,7 +2,7 @@ elasticSearch {
     /**
      * Date formats used by the unmarshaller of the JSON responses
      */
-    date.formats = ["yyyy-MM-dd'T'HH:mm:ss.S'Z'"]
+    date.formats = ["yyyy-MM-dd'T'HH:mm:ss'Z'", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
 
     /**
      * Hosts for remote ElasticSearch instances.
