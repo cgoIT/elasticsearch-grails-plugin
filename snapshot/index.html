@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="author" content="Puneet Behl">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="author" content="Carsten Götzinger">
 <meta name="copyright" content="Apache License, Version 2.0">
 <title>Elasticsearch Plugin - Reference Documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -19,7 +19,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -54,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -66,7 +65,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -121,13 +119,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -418,14 +419,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
 <h1>Elasticsearch Plugin - Reference Documentation</h1>
 <div class="details">
-<span id="author" class="author">Puneet Behl</span><br>
-<span id="revnumber">version 2.5.0.BUILD-SNAPSHOT</span>
+<span id="author" class="author">Carsten Götzinger</span><br>
+<span id="revnumber">version 2.7.4-SNAPSHOT</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -487,6 +488,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#highlighting">6.6. Highlighting</a></li>
 <li><a href="#sorting">6.7. Sorting</a></li>
 <li><a href="#pagination">6.8. Pagination</a></li>
+<li><a href="#aggregation">6.9. Aggregation</a></li>
 </ul>
 </li>
 <li><a href="#admin">7. Admin</a>
@@ -516,12 +518,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="introduction">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ElasticSearch plugin intends to implement a simple integration with Grails of the Open Source Search Engine <a href="http://www.elasticsearch.org/">ElasticSearch</a>,
-which is based on Lucene and provide distributed capabilities.</p>
+<p>The ElasticSearch plugin intends to implement a simple integration with Grails of the Open Source Search Engine <a href="http://www.elasticsearch.org/">ElasticSearch</a>, which is based on Lucene and provide distributed capabilities.</p>
 </div>
 <div class="paragraph">
-<p>The plugin focus on exposing Grails domain classes for the moment. It highly takes the existing <a href="http://grails.org/plugin/searchable">Searchable Plugin</a> as
-reference for its syntax and behaviour.</p>
+<p>The plugin focuses on exposing Grails domain classes for the moment.
+It highly takes the existing <a href="http://grails.org/plugin/searchable">Searchable Plugin</a> as reference for its syntax and behaviour.</p>
 </div>
 <div class="paragraph">
 <p>Note that the plugin is still under development, so you may not be able to use all the features of ElasticSearch yet.</p>
@@ -557,9 +558,161 @@ reference for its syntax and behaviour.</p>
 <div class="sect2">
 <h3 id="history">1.2. History</h3>
 <div class="sect3">
-<h4 id="grails-3-x-version">1.2.1. Grails 3.x version</h4>
+<h4 id="grails-4-x-version">1.2.1. Grails 4.x version</h4>
 <div class="ulist">
 <ul>
+<li>
+<p>December 24, 2019</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.8.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgraded to Grails 4.0.1</p>
+</li>
+<li>
+<p>Upgraded to Elasticsearch 7.5.1</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="grails-3-x-version">1.2.2. Grails 3.x version</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>February 12, 2020</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.7.3</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ignore _domainTypeName in DomainClassUnmarshaller</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>January 2, 2020</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.7.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgraded to Grails 3.3.11</p>
+</li>
+<li>
+<p>Upgraded to Elasticsearch 7.5.1</p>
+</li>
+<li>
+<p>Don&#8217;t use old _type in mapping (deprecated in ES)</p>
+</li>
+<li>
+<p>Optionally add _domainTypeName in mapping</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>August 12, 2019</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.7.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgraded to Grails 3.3.10</p>
+</li>
+<li>
+<p>Upgraded to Elasticsearch 7.3.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Return type of count method in ElasticSearchService is now <code>java.lang.Long</code> (was <code>java.lang.Integer</code> before)</p>
+</li>
+<li>
+<p>The property <code>total</code> in class <code>grails.plugins.elasticsearch.ElasticSearchResult</code> is now of type <code>org.apache.lucene.search.TotalHits</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Make java.time classes usable</p>
+</li>
+<li>
+<p>Make aggregations usable with this plugin</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>August 6, 2019</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.6.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgraded to Grails 3.3.9</p>
+</li>
+<li>
+<p>Upgraded to Elasticsearch 6.8.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>mapping option index: was before <code>analyzed</code>, <code>not_analyzed</code>, <code>no</code> and can now only be: <code>true</code>, <code>false</code></p>
+</li>
+<li>
+<p><code>include_in_all</code> is deprecated because of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.4/mapping-all-field.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/6.4/mapping-all-field.html</a>, but could be enabled with <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.4/mapping-all-field.html#enabling-all-field" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/6.4/mapping-all-field.html#enabling-all-field</a>, but now completely disabled in ElasticSearchMappingFactory.groovy:125</p>
+</li>
+<li>
+<p>Removal of mapping types: <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the documentation 4.1. Class Mapping &#8594; 4.1.1. root is not used anymore, because every domain class will get its own index</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>parent</code> is no longer useable (not supported by Elasticsearch 6.x)</p>
+</li>
+<li>
+<p>Embedded ES was removed and so there is no accurate possibility to run integration tests with ES, see here: <a href="https://discuss.elastic.co/t/in-memory-testing-with-resthighlevelclient/106196/6" class="bare">https://discuss.elastic.co/t/in-memory-testing-with-resthighlevelclient/106196/6</a> . For now the integration tests are only working if a local elasticsearch version is running, which can be downloaded here: <a href="https://www.elastic.co/downloads/past-releases" class="bare">https://www.elastic.co/downloads/past-releases</a> - please note that you&#8217;ve to use the same version like described in the above comments, so for now it is 6.8.2</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>May 10, 2018</p>
 <div class="ulist">
@@ -707,7 +860,7 @@ reference for its syntax and behaviour.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="grails-2-x-version">1.2.2. Grails 2.x version</h4>
+<h4 id="grails-2-x-version">1.2.3. Grails 2.x version</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -722,7 +875,7 @@ reference for its syntax and behaviour.</p>
 <p>New Elasticsearch 2.1.2 release</p>
 </li>
 <li>
-<p>Immutable Settings Removed  - Use <code>Settings.builder()</code> instead of <code>ImmutableSettings.builder()</code></p>
+<p>Immutable Settings Removed - Use <code>Settings.builder()</code> instead of <code>ImmutableSettings.builder()</code></p>
 </li>
 <li>
 <p><code>BroadcastOperationResponse</code> got renamed to <code>BroadcastResponse</code></p>
@@ -734,7 +887,9 @@ reference for its syntax and behaviour.</p>
 <p><code>memory</code> type is now deprecated</p>
 </li>
 <li>
-<p>Query/filter refactoring - <code>org.elasticsearch.index.queries.FilterBuilders</code> has been removed as part of the merge of queries and filters. These filters are now available in <code>QueryBuilders</code> with the same name. All methods that used to accept a <code>FilterBuilder</code> now accept a <code>QueryBuilder</code> instead.</p>
+<p>Query/filter refactoring - <code>org.elasticsearch.index.queries.FilterBuilders</code> has been removed as part of the merge of queries and filters.
+These filters are now available in <code>QueryBuilders</code> with the same name.
+All methods that used to accept a <code>FilterBuilder</code> now accept a <code>QueryBuilder</code> instead.</p>
 </li>
 <li>
 <p>For more information related to changes in underline Java API <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_20_java_api_changes.html#_query_filter_refactoring">click here</a></p>
@@ -1221,6 +1376,9 @@ reference for its syntax and behaviour.</p>
 <li>
 <p><a href="https://github.com/puneetbehl">Puneet Behl</a></p>
 </li>
+<li>
+<p><a href="https://github.com/cgoIT">Carsten Götzinger (cgo IT)</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1260,7 +1418,8 @@ reference for its syntax and behaviour.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The versioning model has changed. The version number of the plugin will reflect the one of the underline integrated Elasticsearch.
+<p>The versioning model has changed.
+The version number of the plugin will reflect the one of the underline integrated Elasticsearch.
 If necessary a 4th level point release number will be used for successive changes on the plugin&#8217;s code with same version of Elasticsearch.</p>
 </div>
 </td>
@@ -1284,34 +1443,59 @@ If necessary a 4th level point release number will be used for successive change
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Elasticsearch</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.4.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.8.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>4.0.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>7.x</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.7.3</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.3.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>7.x</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.4.1</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.1.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5.x (tested with 5.4.1)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.3.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>7.x</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2.0</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.1.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.3.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.0.2</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.0.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0.1.0</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.4.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.1.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0.0.4.5</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.4.x</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.x</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.x (tested with 5.4.1)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.x</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0.2.x</p></td>
@@ -1354,7 +1538,7 @@ If necessary a 4th level point release number will be used for successive change
 <p><em>Existing versions in</em> <strong>bold</strong></p>
 </div>
 <div class="paragraph">
-<p>Current version is <strong>2.5.0.BUILD-SNAPSHOT</strong> (for Grails 2.x the latest version is <strong>0.1.0</strong>)</p>
+<p>The current version is <strong>2.7.4-SNAPSHOT</strong> (for Grails 2.x the latest version is <strong>0.1.0</strong>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1374,7 +1558,8 @@ If necessary a 4th level point release number will be used for successive change
 <div class="sect2">
 <h3 id="overriding-spring-boot-elasticsearch-version">2.1. Overriding Spring Boot elasticsearch version</h3>
 <div class="paragraph">
-<p>Spring Boot 1.3.x supports Elasticsearch 1.5.2 OOTB (<a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76" class="bare">https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76</a>) and will install dependencies for this version, if not explicitly overriden. To do so add the following to your <code>build.gradle</code>:</p>
+<p>Spring Boot 1.3.x supports Elasticsearch 1.5.2 OOTB (<a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76" class="bare">https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76</a>) and will install dependencies for this version, if not explicitly overriden.
+To do so add the following to your <code>build.gradle</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1570,7 +1755,8 @@ The mode is defined with the following config key:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>"Transport" mode needs you to provide the host address and port. You can define one or multiple hosts with the following config key:</p>
+<p>"Transport" mode needs you to provide the host address and port.
+You can define one or multiple hosts with the following config key:</p>
 </div>
 <div class="listingblock">
 <div class="title">application.groovy or Config.groovy</div>
@@ -1599,7 +1785,9 @@ The mode is defined with the following config key:</p>
 <div id="INFO" class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>The node.client setting has been removed. A node with such a setting set will not start up. Instead, each node role needs to be set separately using the existing node.master, node.data and node.ingest supported static settings.</p>
+<p>The node.client setting has been removed.
+A node with such a setting set will not start up.
+Instead, each node role needs to be set separately using the existing node.master, node.data and node.ingest supported static settings.</p>
 </div>
 </div>
 </div>
@@ -1665,7 +1853,8 @@ The mode is defined with the following config key:</p>
 <div class="sect2">
 <h3 id="mapping-migration-properties">2.4. Mapping Migration properties</h3>
 <div class="paragraph">
-<p>Define the application&#8217;s behaviour when a conflict is found while installing Elasticsearch mappings on startup. For a detailed explanation, see <a href="#mappingMigrations">Mapping Migrations</a>.</p>
+<p>Define the application&#8217;s behaviour when a conflict is found while installing Elasticsearch mappings on startup.
+For a detailed explanation, see <a href="#mappingMigrations">Mapping Migrations</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="code-elasticsearch-migration-strategy-code">2.4.1. <code>elasticSearch.migration.strategy</code></h4>
@@ -1717,7 +1906,9 @@ The mode is defined with the following config key:</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-migration-aliasreplacesindex-code">2.4.2. <code>elasticSearch.migration.aliasReplacesIndex</code></h4>
 <div class="paragraph">
-<p>Deals with a special conflict case using the <code>'alias'</code> strategy. When the <code>'alias'</code> migration strategy is chosen and there&#8217;s a mapping conflict on an index, defines whether to replace the index with a versioned index (<code>&lt;indexName&gt;_vX</code>) and an alias (<code>&lt;indexName&gt;</code>). This is required when applying the alias strategy on top of existing indices for the first time as indices cannot be renamed (from <code>&lt;indexName&gt;</code> to <code>&lt;indexName&gt;_vX</code>) and an alias cannot exist with the same name as an index.</p>
+<p>Deals with a special conflict case using the <code>'alias'</code> strategy.
+When the <code>'alias'</code> migration strategy is chosen and there&#8217;s a mapping conflict on an index, defines whether to replace the index with a versioned index (<code>&lt;indexName&gt;_vX</code>) and an alias (<code>&lt;indexName&gt;</code>).
+This is required when applying the alias strategy on top of existing indices for the first time as indices cannot be renamed (from <code>&lt;indexName&gt;</code> to <code>&lt;indexName&gt;_vX</code>) and an alias cannot exist with the same name as an index.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 3. Possible Values for aliasReplacesIndex</caption>
@@ -1760,7 +1951,9 @@ The mode is defined with the following config key:</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-migration-disablealiaschange-code">2.4.3. <code>elasticSearch.migration.disableAliasChange</code></h4>
 <div class="paragraph">
-<p>In some cases the developer may prefer not to upgrade the alias to the new version of the index until some other tasks are performed. This allows them to disable automatically pointing the alias to a new version of the index when this is created. Aliases can be changed later on manually or programatically using <code>elasticSearchAdminService</code></p>
+<p>In some cases the developer may prefer not to upgrade the alias to the new version of the index until some other tasks are performed.
+This allows them to disable automatically pointing the alias to a new version of the index when this is created.
+Aliases can be changed later on manually or programatically using <code>elasticSearchAdminService</code></p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. Possible Values for disableAliasChange</caption>
@@ -1806,7 +1999,8 @@ The mode is defined with the following config key:</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-searchmethodname-code">2.5.1. <code>elasticSearch.searchMethodName</code></h4>
 <div class="paragraph">
-<p>Change the name of search method in domain class. By default it&#8217;s <code>search</code>.</p>
+<p>Change the name of search method in domain class.
+By default it&#8217;s <code>search</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example</p>
@@ -1834,7 +2028,8 @@ The mode is defined with the following config key:</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-counthitsmethodname-code">2.5.2. <code>elasticSearch.countHitsMethodName</code></h4>
 <div class="paragraph">
-<p>Change the name of countHits method in domain class. By default it&#8217;s <code>countHits</code>.</p>
+<p>Change the name of countHits method in domain class.
+By default it&#8217;s <code>countHits</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example</p>
@@ -1998,7 +2193,8 @@ Default to <code>false</code>.</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-index-name-code">2.6.10. <code>elasticSearch.index.name</code></h4>
 <div class="paragraph">
-<p>A string indicating which ElasticSearch index should be used.  If not present, will default to the package name of the domain in question.</p>
+<p>A string indicating which ElasticSearch index should be used.
+If not present, will default to the package name of the domain in question.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2008,7 +2204,10 @@ Default to <code>false</code>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>From Elasticsearch 5.0 on only selected settings like for instance index.codec can be set on the node level. All other settings must be set on each individual index. To set default values on every index, index templates should be used instead. So, unset this value if you are using Elasticsearch v5.0 or above.</p>
+<p>From Elasticsearch 5.0 on only selected settings like for instance index.codec can be set on the node level.
+All other settings must be set on each individual index.
+To set default values on every index, index templates should be used instead.
+So, unset this value if you are using Elasticsearch v5.0 or above.</p>
 </div>
 </td>
 </tr>
@@ -2064,7 +2263,8 @@ More details on the possible values on the <a href="http://www.elasticsearch.org
 <div class="sect3">
 <h4 id="code-elasticsearch-index-settings-numberofreplicas-code">2.6.13. <code>elasticSearch.index.settings.numberOfReplicas</code></h4>
 <div class="paragraph">
-<p>Sets the number of replicas created for each shard of the index. If not present, will default to zero.</p>
+<p>Sets the number of replicas created for each shard of the index.
+If not present, will default to zero.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2092,19 +2292,22 @@ If this setting is not specified, 500 will be use by default.</p>
 <div class="sect3">
 <h4 id="code-elasticsearch-path-plugins-code">2.6.17. <code>elasticSearch.path.plugins</code></h4>
 <div class="paragraph">
-<p>The location of plugin files such as native scripts. Each plugin will be contained in a subdirectory.</p>
+<p>The location of plugin files such as native scripts.
+Each plugin will be contained in a subdirectory.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="code-elasticsearch-searchableproperty-name-code">2.6.18. <code>elasticSearch.searchableProperty.name</code></h4>
 <div class="paragraph">
-<p>The name of the ElasticSearch mapping configuration property that annotates domain classes. The default is 'searchable'.</p>
+<p>The name of the ElasticSearch mapping configuration property that annotates domain classes.
+The default is 'searchable'.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="code-elasticsearch-includetransients-code">2.6.19. <code>elasticSearch.includeTransients</code></h4>
 <div class="paragraph">
-<p>Whether to index and search all non excluded transient properties. All explicitly included transients in <code>only</code> will be indexed regardless.</p>
+<p>Whether to index and search all non excluded transient properties.
+All explicitly included transients in <code>only</code> will be indexed regardless.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2141,7 +2344,7 @@ If this setting is not specified, 500 will be use by default.</p>
 <div class="content">
 <pre>dependencies {
     ...
-    compile "org.grails.plugins:elasticsearch:2.4.0"
+    compile "org.grails.plugins:elasticsearch:2.7.4-SNAPSHOT"
     ...
 }</pre>
 </div>
@@ -2154,11 +2357,12 @@ If this setting is not specified, 500 will be use by default.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Spring Boot 1.3.x supports Elasticsearch 1.5.2 OOTB (<a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76" class="bare">https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76</a>) and will install dependencies for this version, if not explicitly overriden. To do so add the following to your <code>build.gradle</code>:</p>
+<p>Spring Boot 1.3.x supports Elasticsearch 1.5.2 OOTB (<a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76" class="bare">https://github.com/spring-projects/spring-boot/blob/master/spring-boot-dependencies/pom.xml#L76</a>) and will install dependencies for this version, if not explicitly overriden.
+To do so add the following to your <code>build.gradle</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def elasticsearchVersion = '5.4.3'
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def elasticsearchVersion = '7.5.1'
 ext['elasticsearch.version'] = elasticsearchVersion</code></pre>
 </div>
 </div>
@@ -2244,7 +2448,8 @@ else {
 <div class="sect3">
 <h4 id="custom-mapping">3.2. Custom mapping</h4>
 <div class="paragraph">
-<p>You can customize how each properties are mapped to the index using a closure. The syntax is similar to GORM&#8217;s mapping DSL.</p>
+<p>You can customize how each properties are mapped to the index using a closure.
+The syntax is similar to GORM&#8217;s mapping DSL.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2314,8 +2519,8 @@ You may not define both except &amp; only settings at the same time.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The properties that are ignored will not be sent to ElasticSearch. It also means that when you will get back a domain
-from ElasticSearch, some fields that are not supposed to be null, may still be null.</p>
+<p>The properties that are ignored will not be sent to ElasticSearch.
+It also means that when you will get back a domain from ElasticSearch, some fields that are not supposed to be null, may still be null.</p>
 </div>
 </td>
 </tr>
@@ -2325,7 +2530,8 @@ from ElasticSearch, some fields that are not supposed to be null, may still be n
 <div class="sect3">
 <h4 id="including-transients">3.4. Including transients</h4>
 <div class="paragraph">
-<p>How the plugin manages transient properties is controlled by the <code>elasticSearch.includeTransients</code> configuration property. If this is set to <code>false</code> only transient properties explicitly included in <code>only</code> will be mapped and searchable, if set to <code>true</code>, all domain class properties will be mapped, including <code>transients</code>.</p>
+<p>How the plugin manages transient properties is controlled by the <code>elasticSearch.includeTransients</code> configuration property.
+If this is set to <code>false</code> only transient properties explicitly included in <code>only</code> will be mapped and searchable, if set to <code>true</code>, all domain class properties will be mapped, including <code>transients</code>.</p>
 </div>
 <div class="paragraph">
 <p>The following are valid examples</p>
@@ -2377,7 +2583,8 @@ class Multiplication {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>From the examples above, once the domain object is found, its transient values will be calculated from the information stored on ElasticSearch: <code>multiplication.result == 6</code>, but <code>tesla.fullName == "null null"</code>, as firstName and lastName where not indexed. This behaviour can be prevented by creating convenient setters for the transient properties.</p>
+<p>From the examples above, once the domain object is found, its transient values will be calculated from the information stored on ElasticSearch: <code>multiplication.result == 6</code>, but <code>tesla.fullName == "null null"</code>, as firstName and lastName where not indexed.
+This behaviour can be prevented by creating convenient setters for the transient properties.</p>
 </div>
 </td>
 </tr>
@@ -2387,7 +2594,9 @@ class Multiplication {
 <div class="sect3">
 <h4 id="transients-and-collections">3.5. Transients and collections</h4>
 <div class="paragraph">
-<p>When transient properties are collections the only way the plugin can define the correct ElasticSearch mapping during boot is if the element types are explicitly defined on the grails domain object. For instances of <code>Collection</code> this can be achieved by defining its type on the <code>hasMany</code> property (otherwise the ElasticSearch type will be defined as <code>object</code>). This is not required for arrays.</p>
+<p>When transient properties are collections the only way the plugin can define the correct ElasticSearch mapping during boot is if the element types are explicitly defined on the grails domain object.
+For instances of <code>Collection</code> this can be achieved by defining its type on the <code>hasMany</code> property (otherwise the ElasticSearch type will be defined as <code>object</code>).
+This is not required for arrays.</p>
 </div>
 <div class="paragraph">
 <p>Some valid examples:</p>
@@ -2420,46 +2629,10 @@ class Multiplication {
 <div class="sect3">
 <h4 id="the-mapper-attachment-plugin">3.6. The Mapper Attachment plugin</h4>
 <div class="paragraph">
-<p>The Elasticsearch plugin does not ship with Mapper Attachment plugin, so if you are using mode <code>local</code> and config <code>elasticSearch.plugin.mapperAttachment.enabled: true</code> then you need to add the following dependency in build.gradle</p>
-</div>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">compile "org.elasticsearch.plugin:mapper-attachments:2.4.6"</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The latest version of Mapper Attachments plugin is not available in Maven</p>
-</div>
-</td>
-</tr>
-</table>
+<p>The Elasticsearch Mapper Attachment plugin is deprecated since ES version 5.0.0. Hence it is no longer supported in this plugin.</p>
 </div>
 <div class="paragraph">
-<p>In order to use the latest version, you need to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Download this plugin for offline install from <a href="https://artifacts.elastic.co/downloads/elasticsearch-plugins/mapper-attachments/mapper-attachments-5.6.9.zip" class="bare">https://artifacts.elastic.co/downloads/elasticsearch-plugins/mapper-attachments/mapper-attachments-5.6.9.zip</a> into <code>/libs/elasticsearch</code> folder.</p>
-</li>
-<li>
-<p>Now, include the downloaded lib into project dependencies as:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">compile fileTree(dir: "libs/elasticsearch", include: '*.jar')</code></pre>
-</div>
+<p>In future versions it could be possible to support the new <a href="https://www.elastic.co/guide/en/elasticsearch/plugins/current/ingest-attachment.html">Ingest Attachment Processor Plugin</a>.</p>
 </div>
 </div>
 </div>
@@ -2468,14 +2641,16 @@ class Multiplication {
 <h2 id="mapping">4. Mapping</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>From version 0.0.4.0 in addition to the indices generated by the plugin based on the domain objects package names or configuration, two new aliases are created for every index: <code>&lt;indexName&gt;_read</code> and <code>&lt;indexName&gt;_write</code>. These two aliases are used by the plugin to index and query from Elasticsearch and are needed to centralise the choice of index to use during mapping migrations when the <code>'alias'</code> strategy is used and there are multiple instances of the application.</p>
+<p>From version 0.0.4.0 in addition to the indices generated by the plugin based on the domain objects package names or configuration, two new aliases are created for every index: <code>&lt;indexName&gt;_read</code> and <code>&lt;indexName&gt;_write</code>.
+These two aliases are being used by the plugin to index and query from Elasticsearch and are needed to centralise the choice of index to use during mapping migrations when the <code>'alias'</code> strategy is being used and there are multiple instances of the application.</p>
 </div>
 <div class="sect2">
 <h3 id="class-mapping">4.1. Class Mapping</h3>
 <div class="sect3">
 <h4 id="root">4.1.1. root</h4>
 <div class="paragraph">
-<p>Determine if the domain class will have its own index or not. Take a boolean as parameter, and is set to <code>true</code> by default.</p>
+<p>Determine if the domain class will have its own index or not.
+Take a boolean as parameter, and is set to <code>true</code> by default.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2500,9 +2675,10 @@ class Tweet {
 </div>
 </div>
 <div class="paragraph">
-<p>In this code, the classes <code>Tweet</code> and <code>Tag</code> are going to have their own index. The class <code>Preference</code> will not.
-It also mean that any search request will never return a Preference-type hit. The dynamic method <code>search</code> will not be
-injected in the <code>Preference</code> domain class.</p>
+<p>In this code, the classes <code>Tweet</code> and <code>Tag</code> are going to have their own index.
+The class <code>Preference</code> will not.
+It also means that any search request will never return a Preference-type hit.
+The dynamic method <code>search</code> will not be injected in the <code>Preference</code> domain class.</p>
 </div>
 <div class="paragraph">
 <p>The domains not root-mapped can still be considered searchable, as they can be components of another domain which is root-mapped.
@@ -2598,8 +2774,8 @@ The syntax is simple:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">index</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"no"</code>, <code>"not_analyzed"</code>, <code>"analyzed"</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How or if the property is made into searchable element. One of <code>"no"</code>, <code>"not_analyzed"</code> or <code>"analyzed"</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code>, <code>true</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The index option controls whether field values are indexed. It accepts <code>true</code> or <code>false</code> and defaults to <code>true</code>. Fields that are not indexed are not queryable.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">fielddata</p></td>
@@ -2681,7 +2857,8 @@ class ReferencingChild {
 <div class="sect2">
 <h3 id="geoPoint">4.4. Geo Point</h3>
 <div class="paragraph">
-<p>A geographic location can be mapped to a geo_point. The field for the longitude has to be named <code>lon</code> and the field for the latitude has to be named <code>lat</code></p>
+<p>A geographic location can be mapped to a geo_point.
+The field for the longitude has to be named <code>lon</code> and the field for the latitude has to be named <code>lat</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong></p>
@@ -2713,11 +2890,11 @@ class Building {
 <div class="sect2">
 <h3 id="alias">4.5. Alias</h3>
 <div class="paragraph">
-<p>A field can be aliased.  This is useful in situations where another service may expect certain tags.</p>
+<p>A field can be aliased.
+This is useful in situations where another service may expect certain tags.</p>
 </div>
 <div class="paragraph">
-<p>For example, <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a> uses an <code>\@timestamp</code> field to filter
-report records by date.</p>
+<p>For example, <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a> uses an <code>\@timestamp</code> field to filter report records by date.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong></p>
@@ -2762,8 +2939,7 @@ session.jsonData = ([foo: 'bar'] as JSON).toString()</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The default mapping would make the jsonData field an escaped String field and
-a search for jsonData.foo = bar would result in no result.
+<p>The default mapping would make the jsonData field an escaped String field and a search for jsonData.foo = bar would result in no result.
 With dynamic mapping enabled for this field, we enable JSON handling of this field and tell elasticsearch to map this field dynamically.
 The result is that a search for <code>jsonData.foo=bar</code> would result in a search hit.</p>
 </div>
@@ -2785,19 +2961,16 @@ The result is that a search for <code>jsonData.foo=bar</code> would result in a 
 <div class="sect2">
 <h3 id="searchableComponentReference">4.7. Searchable Component Reference</h3>
 <div class="paragraph">
-<p>The plugin support a similar searchable-component &amp; searchable-reference behaviour from Compass
-when you are dealing with domain association.
+<p>The plugin support a similar searchable-component &amp; searchable-reference behaviour from Compass when you are dealing with domain association.
 See below to find out about the difference between both mapping modes.</p>
 </div>
 <div class="sect3">
 <h4 id="searchableReference">4.7.1. Searchable Reference</h4>
 <div class="paragraph">
-<p>The searchable-reference mapping mode is the default mode used for association, and requires the
-searchable class of the association to be root-mapped in order to have its own index.
+<p>The searchable-reference mapping mode is the default mode used for association, and requires the searchable class of the association to be root-mapped in order to have its own index.
 With this mode, the associated domains are not completely marshalled in the resulting JSON document:
 only the id and the type of the instances are kept.
-When the document is retrieved from the index, the plugin will automatically rebuild the association from the
-indices using the stored id.</p>
+When the document is retrieved from the index, the plugin will automatically rebuild the association from the indices using the stored id.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong></p>
@@ -2851,8 +3024,7 @@ class OtherDomain {
 <div class="sect3">
 <h4 id="searchableComponent">4.7.2. Searchable Component</h4>
 <div class="paragraph">
-<p>The searchable-component mapping mode must be explicitly set, and does not require the
-searchable class of the association to be root-mapped.</p>
+<p>The searchable-component mapping mode must be explicitly set, and does not require the searchable class of the association to be root-mapped.</p>
 </div>
 <div class="paragraph">
 <p>With this mode, the associated domains are nested in the parent document.</p>
@@ -2921,15 +3093,19 @@ class OtherDomain {
 <div class="sect2">
 <h3 id="mappingMigrations">4.8. Mapping Migrations</h3>
 <div class="paragraph">
-<p>During the application startup the application will attempt to create the needed indices on Elasticsearch and create the type mappings defined by the user. If these indices and mappings already existed on the Elasticsearch cluster (ie. an older version of the application was running against it) and the new mapping definitions differ with the existing ones there&#8217;s the potential for a Mapping conflict. This section describes how to configure the application to deal with this scenario.</p>
+<p>During the application startup the application will attempt to create the needed indices on Elasticsearch and create the type mappings defined by the user.
+If these indices and mappings already existed on the Elasticsearch cluster (ie. an older version of the application was running against it) and the new mapping definitions differ with the existing ones there&#8217;s the potential for a Mapping conflict.
+This section describes how to configure the application to deal with this scenario.</p>
 </div>
 <div class="paragraph">
-<p>It is important to highlight that not all type mapping changes will result on a conflict. Ie. adding a new field to a mapping does not result in a conflict whilst changing a property from component:'inner' to nested or vice-versa, will. These strategies will only be needed and applied when a <strong>conflicting</strong> mapping is found.</p>
+<p>It is important to highlight that not all type mapping changes will result on a conflict.
+Ie. adding a new field to a mapping does not result in a conflict whilst changing a property from component:'inner' to nested or vice-versa, will.
+These strategies will only be needed and applied when a <strong>conflicting</strong> mapping is being found.</p>
 </div>
 <div class="sect3">
 <h4 id="migration-strategies">4.8.1. Migration Strategies</h4>
 <div class="paragraph">
-<p>The migration strategy is defined by the <code>elasticSearch.migration.strategy</code> configuration property and it accepts three values:</p>
+<p>The migration strategy is being defined by the <code>elasticSearch.migration.strategy</code> configuration property, and it accepts three values:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2957,7 +3133,8 @@ class OtherDomain {
 <div class="sect3">
 <h4 id="migration-strategy-none">4.8.2. Migration Strategy 'none'</h4>
 <div class="paragraph">
-<p>This option keeps the original behaviour the plugin used before the Migration Strategies were implemented. When a Mapping Merge conflict id identified the event will be logged and an Exception will be logged.
+<p>This option keeps the original behaviour the plugin used before the Migration Strategies were implemented.
+When a Mapping Merge conflict id identified the event will be logged and an Exception will be logged.
 It will be responsibility for the application administrator to manually fix the problem.</p>
 </div>
 <div class="paragraph">
@@ -2967,7 +3144,8 @@ It will be responsibility for the application administrator to manually fix the 
 <div class="sect3">
 <h4 id="migration-strategy-deleteindex">4.8.3. Migration Strategy 'deleteIndex'</h4>
 <div class="paragraph">
-<p>When choosing this option, when a conflict occurs installing  mapping, the application will delete the existing index for the type, <strong>alongside with all content indexed on that index (including content from other mappings)</strong> and it will recreate the index and all its mappings. There are a couple of important details on this information:</p>
+<p>When choosing this option, when a conflict occurs installing mapping, the application will delete the existing index for the type, <strong>alongside with all content indexed on that index (including content from other mappings)</strong> and it will recreate the index and all its mappings.
+There are a couple of important details on this information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3091,7 +3269,8 @@ On Boostrap (bulkIndexOnStartup)
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Aliases will only point to the new version of the index once all content is reindexed (if chosen to). Meanwhile, all index requests, either by <code>elasticSearchService</code> or using dynamic finders will go to the new version of the index, whilst queries will go to the old version of the index.</p>
+<p>Aliases will only point to the new version of the index once all content is reindexed (if chosen to).
+Meanwhile, all index requests, either by <code>elasticSearchService</code> or using dynamic finders will go to the new version of the index, whilst queries will go to the old version of the index.</p>
 </div>
 </td>
 </tr>
@@ -3104,10 +3283,14 @@ On Boostrap (bulkIndexOnStartup)
 <div class="sect3">
 <h4 id="dealing-with-deleted-content">4.8.5. Dealing with deleted content</h4>
 <div class="paragraph">
-<p>Using the <code>'delete'</code> or <code>'alias'</code> strategy may lead to deleting content stored on Elasticsearch. This content can be automatically reindexed using the <code>elasticSearch.bulkIndexOnStartup</code>. The duration of this process will depend on the amount of content to index.</p>
+<p>Using the <code>'delete'</code> or <code>'alias'</code> strategy may lead to deleting content stored on Elasticsearch.
+This content can be automatically reindexed using the <code>elasticSearch.bulkIndexOnStartup</code>.
+The duration of this process will depend on the amount of content to index.</p>
 </div>
 <div class="paragraph">
-<p>When this property is set to <code>true</code> all content will be deleted. When set to <code>'deleted'</code> only the domain classes which documents where deleted will be indexed. In either case, when using the <code>'alias'</code> strategy, once all content is indexed all aliases will point to the latest version of the index.</p>
+<p>When this property is set to <code>true</code> all content will be deleted.
+When set to <code>'deleted'</code> only the domain classes which documents where deleted will be indexed.
+In either case, when using the <code>'alias'</code> strategy, once all content is indexed all aliases will point to the latest version of the index.</p>
 </div>
 </div>
 </div>
@@ -3117,11 +3300,10 @@ On Boostrap (bulkIndexOnStartup)
 <h2 id="indexing">5. Indexing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With its default configuration (with the <code>disableAutoIndex</code> configuration key set to <code>false</code>), the plugin is indexing
-automatically any searchable domains when GORM/Hibernate do a save or an update in the database.</p>
+<p>With its default configuration (with the <code>disableAutoIndex</code> configuration key set to <code>false</code>), the plugin is indexing automatically any searchable domains when GORM/Hibernate do a save or an update in the database.</p>
 </div>
 <div class="paragraph">
-<p>It also delete automatically from the index any document corresponding to a domain that is deleted from the database.
+<p>It also deletes automatically from the index any document corresponding to a domain that is deleted from the database.
 You normally shouldn&#8217;t have to worry about indexing, but sometimes you may have to do it by yourself, for example on dirty domain object that you may not want to save right now.</p>
 </div>
 <div class="paragraph">
@@ -3250,7 +3432,8 @@ res.searchResults.each {
 </div>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re willing to retrieve only the number of hits for a peculiar query, you can use the <code>countHits()</code> method. It will only return an <code>Integer</code> representing the total hits matching your query.</p>
+<p>If you&#8217;re willing to retrieve only the number of hits for a peculiar query, you can use the <code>countHits()</code> method.
+It will only return an <code>Integer</code> representing the total hits matching your query.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong></p>
@@ -3268,7 +3451,8 @@ println "Found ${res} result(s)"</code></pre>
 <h3 id="queryStrings">6.1. Query Strings</h3>
 <div class="paragraph">
 <p>The search method injected in the domain or the <code>ElasticSearchService</code> has multiple signatures available.
-You can pass it a simple <code>String</code> to compute your search request. That string will be parsed by the <strong>Lucene query parser</strong> so feel free to use its syntax to do more specific search query.</p>
+You can pass it a simple <code>String</code> to compute your search request.
+That string will be parsed by the <strong>Lucene query parser</strong> so feel free to use its syntax to do more specific search query.</p>
 </div>
 <div class="paragraph">
 <p>You can find out about the syntax on the <a href="http://lucene.apache.org/java/3_0_3/queryparsersyntax.html">Apache Lucene website</a>.</p>
@@ -3370,8 +3554,7 @@ def result = elasticSearchService.search(
 <div class="sect2">
 <h3 id="highlighting">6.6. Highlighting</h3>
 <div class="paragraph">
-<p>The search method support highlighting: automatic wrapping of the matching terms in the search results with
-HTML/XML/Whatever tags.</p>
+<p>The search method support highlighting: automatic wrapping of the matching terms in the search results with HTML/XML/Whatever tags.</p>
 </div>
 <div class="paragraph">
 <p>You can activate this with a <code>Closure</code> containing the highlight settings in the search method <code>highlight</code> parameter.</p>
@@ -3525,6 +3708,97 @@ elasticSearchService.search('xyz', [ indices: Post, types: Post, from: 0, size: 
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="aggregation">6.9. Aggregation</h3>
+<div class="paragraph">
+<p>You can use AggregationBuilders while searching.
+The aggregations' framework helps provide aggregated data based on a search query.
+It is based on simple building blocks called aggregations, that can be composed in order to build complex summaries of the data.</p>
+</div>
+<div class="paragraph">
+<p>You could use preconstructed AggregationBuilders or use the standard DSL based aggregations</p>
+</div>
+<div class="paragraph">
+<p><strong>Examples</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Use of AggregationBuilders</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">// build your aggregation(s)
+def aggregations = []
+aggregations &lt;&lt; AggregationBuilders.filters('types',
+        new FiltersAggregator.KeyedFilter('jpg', QueryBuilders.matchQuery('type', 'jpg')),
+        new FiltersAggregator.KeyedFilter('png', QueryBuilders.matchQuery('type', 'png'))
+)
+aggregations &lt;&lt; AggregationBuilders.terms('names').field('name')
+aggregations &lt;&lt; AggregationBuilders.avg('avg_size').field('size')
+
+// Use it
+
+Photo.search('xyz', null as Closure, aggregations)
+
+// or
+
+elasticSearchService.search(
+                    'xyz',
+                    null as Closure,
+                    aggregations,
+                    [ indices: Photo, types: Photo ])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Use of DSL</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">Photo.search('xyz', null as Closure, {
+            "types" {
+                filters {
+                    "filters" {
+                        "jpg" { match(type: 'jpg') }
+                        "png" { match(type: 'png') }
+                    }
+                }
+            }
+
+            "names" {
+                terms(field: 'name')
+            }
+
+            "avg_size" {
+                avg(field: 'size')
+            }
+        })
+
+// or
+
+elasticSearchService.search(
+                    'xyz',
+                    null as Closure,
+                    {
+                        "types" {
+                            filters {
+                                "filters" {
+                                    "jpg" { match(type: 'jpg') }
+                                    "png" { match(type: 'png') }
+                                }
+                            }
+                        }
+
+                        "names" {
+                            terms(field: 'name')
+                        }
+
+                        "avg_size" {
+                            avg(field: 'size')
+                        }
+                    },
+                    [ indices: Photo, types: Photo ])</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3564,7 +3838,8 @@ elasticSearchAdminService.refresh() // Ensure that the 3 previous index
 <div class="sect2">
 <h3 id="deleteIndex">7.2. Delete Index</h3>
 <div class="paragraph">
-<p>Delete an index, all its mapping and its content from the ElasticSearch instance. Be careful when using this command because it cannot be undone.</p>
+<p>Delete an index, all its mapping and its content from the ElasticSearch instance.
+Be careful when using this command because it cannot be undone.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3622,7 +3897,7 @@ elasticSearchAdminService.refresh() // Ensure that the 3 previous index
 </div>
 </div>
 <div class="paragraph">
-<p>Please refers to the <a href="http://www.elasticsearch.org/guide/reference/java-api/">Elastic Search API</a> for more information on the methods and properties available on the client.</p>
+<p>Please refer to the <a href="http://www.elasticsearch.org/guide/reference/java-api/">Elastic Search API</a> for more information on the methods and properties available on the client.</p>
 </div>
 </div>
 </div>
@@ -3663,9 +3938,9 @@ elasticSearchAdminService.refresh() // Ensure that the 3 previous index
   static searchable = {
     except = 'password'
     lastname boost:20
-    firstname boost:15, index:'not_analyzed'
-    listOfThings index:'no'
-    someThings index:'no'
+    firstname boost:15, index:'true'
+    listOfThings index:'false'
+    someThings index:'false'
     tweets component:true
   }
 
@@ -3741,8 +4016,7 @@ elasticSearchAdminService.refresh() // Ensure that the 3 previous index
 </div>
 </div>
 <div class="paragraph">
-<p>With this code (considering that there are already <code>User</code> in the database), new Tweets will be indexed automatically,
-and corresponding <code>User</code> indexed documents will be updated since we have set the <code>tweets</code> association as component.</p>
+<p>With this code (considering that there are already <code>User</code> in the database), new Tweets will be indexed automatically, and corresponding <code>User</code> indexed documents will be updated since we have set the <code>tweets</code> association as component.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3822,7 +4096,8 @@ and corresponding <code>User</code> indexed documents will be updated since we h
 </div>
 </div>
 <div class="paragraph">
-<p>GeoPoint represents the geo coordinates for a building. The field names <code>lat</code> and <code>lon</code> are mandatory.</p>
+<p>GeoPoint represents the geo coordinates for a building.
+The field names <code>lat</code> and <code>lon</code> are mandatory.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3887,6 +4162,10 @@ and corresponding <code>User</code> indexed documents will be updated since we h
 <div class="sect2">
 <h3 id="parentChildExample">9.3. Parent/Child mapping</h3>
 <div class="paragraph">
+<p>Mapping types being removed, please see:
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html</a></p>
+</div>
+<div class="paragraph">
 <p>A store with many departments</p>
 </div>
 <div class="listingblock">
@@ -3917,7 +4196,7 @@ class Department {
     }
 
     static searchable = {
-        store parent: true, component:true
+        store join: true, component:true
     }
 }</code></pre>
 </div>
@@ -3946,7 +4225,8 @@ class Department {
 <p>Normally this issues happen where different versions of same modules are download from different plugins or dependencies in <code>build.gradle</code></p>
 </div>
 <div class="paragraph">
-<p>It seems like there are multiple versions of groovy in the classpath. Looks similar to <a href="http://stackoverflow.com/questions/31099214/tomcat-conflicting-module-versions-module-groovy-all-is-loaded-in-version-2-3" class="bare">http://stackoverflow.com/questions/31099214/tomcat-conflicting-module-versions-module-groovy-all-is-loaded-in-version-2-3</a></p>
+<p>It seems like there are multiple versions of groovy in the classpath.
+Looks similar to <a href="http://stackoverflow.com/questions/31099214/tomcat-conflicting-module-versions-module-groovy-all-is-loaded-in-version-2-3" class="bare">http://stackoverflow.com/questions/31099214/tomcat-conflicting-module-versions-module-groovy-all-is-loaded-in-version-2-3</a></p>
 </div>
 <div class="sect3">
 <h4 id="exception">10.1.1. Exception</h4>
@@ -4009,8 +4289,8 @@ class Department {
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 2.5.0.BUILD-SNAPSHOT<br>
-Last updated 2019-01-23 17:10:43 +00:00
+Version 2.7.4-SNAPSHOT<br>
+Last updated 2020-06-04 09:27:19 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
