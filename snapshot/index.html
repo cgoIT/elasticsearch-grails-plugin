@@ -426,7 +426,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Elasticsearch Plugin - Reference Documentation</h1>
 <div class="details">
 <span id="author" class="author">Carsten Götzinger</span><br>
-<span id="revnumber">version 2.7.6-SNAPSHOT</span>
+<span id="revnumber">version 2.7.6</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -587,6 +587,23 @@ It highly takes the existing <a href="http://grails.org/plugin/searchable">Searc
 <h4 id="grails-3-x-version">1.2.2. Grails 3.x version</h4>
 <div class="ulist">
 <ul>
+<li>
+<p>June 12, 2020</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.7.6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>REVERT: Change plugin group id to de.cgoit.grails.plugins</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>June 08, 2020</p>
 <div class="ulist">
@@ -1443,7 +1460,7 @@ All methods that used to accept a <code>FilterBuilder</code> now accept a <code>
 <p>Graeme Rocher started the first draft which this plugin is based on.</p>
 </div>
 <div class="paragraph">
-<p>Get the full and updated list of contributors on the <a href="https://github.com/cgoIT/elasticsearch-grails-plugin/graphs/contributors">github</a> repository.</p>
+<p>Get the full and updated list of contributors on the <a href="https://github.com/puneetbehl/elasticsearch-grails-plugin/graphs/contributors">github</a> repository.</p>
 </div>
 </div>
 </div>
@@ -1487,14 +1504,19 @@ If necessary a 4th level point release number will be used for successive change
 <td class="tableblock halign-left valign-top"><p class="tableblock">7.7.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.6-SNAPSHOT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.7-SNAPSHOT</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.3.x</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7.7.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.7.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2.7.6</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3.3.x</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>7.7.x</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.7.x</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.7.4</p></td>
@@ -1517,7 +1539,7 @@ If necessary a 4th level point release number will be used for successive change
 <p><em>Existing versions in</em> <strong>bold</strong></p>
 </div>
 <div class="paragraph">
-<p>The current version is <strong>2.7.6-SNAPSHOT</strong> (for Grails 2.x the latest version is <strong>0.1.0</strong>)</p>
+<p>The current version is <strong>2.7.6</strong> (for Grails 2.x the latest version is <strong>0.1.0</strong>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -2205,7 +2227,7 @@ All explicitly included transients in <code>only</code> will be indexed regardle
 <div class="content">
 <pre>dependencies {
     ...
-    compile "de.cgoit.grails.plugins:elasticsearch:2.7.5"
+    compile "grails.plugins:elasticsearch:2.7.6"
     ...
 }</pre>
 </div>
@@ -2228,7 +2250,7 @@ All explicitly included transients in <code>only</code> will be indexed regardle
 </div>
 </div>
 <div class="paragraph">
-<p>In order debug Elasticsearch plugin, add <code>logger("de.cgoit.grails.plugins.elasticsearch", DEBUG, ['STDOUT'], false)</code> in <code>logback.groovy</code> file as following:</p>
+<p>In order debug Elasticsearch plugin, add <code>logger("grails.plugins.elasticsearch", DEBUG, ['STDOUT'], false)</code> in <code>logback.groovy</code> file as following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2266,7 +2288,7 @@ if (Environment.isDevelopmentMode() &amp;&amp; targetDir != null) {
         }
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
-    logger("de.cgoit.grails.plugins.elasticsearch", DEBUG, ['STDOUT'], false)
+    logger("grails.plugins.elasticsearch", DEBUG, ['STDOUT'], false)
     root(ERROR, ['STDOUT', 'FULL_STACKTRACE'])
 }
 else {
@@ -4132,8 +4154,8 @@ Looks similar to <a href="http://stackoverflow.com/questions/31099214/tomcat-con
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 2.7.6-SNAPSHOT<br>
-Last updated 2020-06-08 11:07:03 +00:00
+Version 2.7.6<br>
+Last updated 2020-06-12 15:58:22 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
