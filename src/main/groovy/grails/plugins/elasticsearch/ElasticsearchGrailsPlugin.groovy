@@ -57,15 +57,15 @@ class ElasticsearchGrailsPlugin extends Plugin {
             [name: 'Carsten Götzinger', email: 'carsten@cgo-it.de']
     ]
 
-    def issueManagement = [system: 'github', url: 'https://github.com/puneetbehl/elasticsearch-grails-plugin/issues']
+    def issueManagement = [system: 'github', url: 'https://github.com/cgoIT/elasticsearch-grails-plugin/issues']
 
-    def scm = [url: 'https://github.com/puneetbehl/elasticsearch-grails-plugin']
+    def scm = [url: 'https://github.com/cgoIT/elasticsearch-grails-plugin']
 
-    def author = 'Puneet Behl'
-    def authorEmail = 'puneet.behl007@gmail.com'
+    def author = 'Carsten Götzinger'
+    def authorEmail = 'info@cgo-it.de'
     def title = 'ElasticSearch Grails Plugin'
     def description = """The revived Elasticsearch plugin for Grails."""
-    def documentation = 'http://puneetbehl.github.io/elasticsearch-grails-plugin'
+    def documentation = 'https://elasticsearch-grails-plugin.cgo-it.de'
 
 
     def profiles = ['web']
