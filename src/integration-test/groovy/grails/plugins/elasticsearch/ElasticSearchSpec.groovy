@@ -9,7 +9,7 @@ import org.elasticsearch.action.admin.indices.get.GetIndexResponse
 import org.elasticsearch.action.search.SearchRequest
 import org.elasticsearch.client.RequestOptions
 import org.elasticsearch.client.RestHighLevelClient
-import org.elasticsearch.cluster.metadata.MappingMetaData
+import org.elasticsearch.cluster.metadata.MappingMetadata
 import org.elasticsearch.common.collect.ImmutableOpenMap
 import org.elasticsearch.index.query.QueryBuilder
 import org.grails.datastore.gorm.GormEntity
@@ -122,14 +122,14 @@ trait ElasticSearchSpec {
         elasticSearchService.elasticSearchContextHolder.getMappingContextByType(clazz).domainClass
     }
 
-    MappingMetaData getFieldMappingMetaData(String indexName, String documentType) {
+    MappingMetadata getFieldMappingMetaData(String indexName, String documentType) {
         if (elasticSearchAdminService.aliasExists(indexName)) {
             indexName = elasticSearchAdminService.indexPointedBy(indexName)
         }
         elasticSearchHelper.withElasticSearch { RestHighLevelClient client ->
             GetIndexRequest request = new GetIndexRequest().indices(indexName)
             GetIndexResponse getIndexResponse = client.indices().get(request, RequestOptions.DEFAULT)
-            ImmutableOpenMap<String, MappingMetaData> indexMappings = getIndexResponse.mappings.get(indexName)
+            ImmutableOpenMap<String, MappingMetadata> indexMappings = getIndexResponse.mappings.get(indexName)
             indexMappings.get('_doc')
         }
     }

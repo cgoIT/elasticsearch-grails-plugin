@@ -30,7 +30,9 @@ import org.elasticsearch.client.slm.PutSnapshotLifecyclePolicyRequest
 import org.elasticsearch.client.slm.SnapshotLifecyclePolicy
 import org.elasticsearch.client.slm.SnapshotRetentionConfiguration
 import org.elasticsearch.cluster.health.ClusterHealthStatus
-import org.elasticsearch.cluster.metadata.RepositoryMetaData
+import org.elasticsearch.cluster.metadata.RepositoryMetadata
+
+//import org.elasticsearch.cluster.metadata.RepositoryMetaData
 import org.elasticsearch.common.settings.Settings
 import org.elasticsearch.common.unit.TimeValue
 import org.elasticsearch.common.xcontent.XContentHelper
@@ -38,8 +40,6 @@ import org.elasticsearch.common.xcontent.XContentType
 import org.elasticsearch.index.query.MatchAllQueryBuilder
 import org.elasticsearch.index.reindex.DeleteByQueryRequest
 import org.elasticsearch.rest.RestStatus
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 
 import java.util.regex.Matcher
 
@@ -391,7 +391,7 @@ class ElasticSearchAdminService {
      * @param name The name of the snapshot repository
      * @return repository metadata if repository exists, otherwise null
      */
-    RepositoryMetaData getSnapshotRepository(String name) {
+    RepositoryMetadata getSnapshotRepository(String name) {
         log.debug "Get snapshot repository ${name} ..."
 
         GetRepositoriesResponse response

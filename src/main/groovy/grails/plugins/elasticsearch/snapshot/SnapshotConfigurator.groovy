@@ -22,7 +22,7 @@ import grails.core.GrailsApplication
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 import org.elasticsearch.cluster.health.ClusterHealthStatus
-import org.elasticsearch.cluster.metadata.RepositoryMetaData
+import org.elasticsearch.cluster.metadata.RepositoryMetadata
 import org.elasticsearch.transport.RemoteTransportException
 
 /**
@@ -61,9 +61,9 @@ class SnapshotConfigurator implements ElasticSearchConfigAware {
         es.waitForClusterStatus(ClusterHealthStatus.YELLOW)
 
         String repositoryName = repositoryConfig.name as String
-        RepositoryMetaData repositoryMetaData = es.getSnapshotRepository(repositoryName)
-        if (repositoryMetaData) {
-            log.info("Snapshot repository ${repositoryName} exists. MetaData=${repositoryMetaData}")
+        RepositoryMetadata repositoryMetadata = es.getSnapshotRepository(repositoryName)
+        if (repositoryMetadata) {
+            log.info("Snapshot repository ${repositoryName} exists. MetaData=${repositoryMetadata}")
         } else {
             log.info("Snapshot repository ${repositoryName} doesn't exist. Creating it")
             ConfigObject config = repositoryConfig.config as ConfigObject
