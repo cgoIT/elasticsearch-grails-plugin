@@ -3,7 +3,7 @@
 ==== Grails 4.x version
 
 * December 24, 2019
-** 2.8.0 (still wip)
+** 3.0.0 (still wip)
 *** Upgraded to Grails 4.0.1
 *** Upgraded to Elasticsearch 7.5.1
 
