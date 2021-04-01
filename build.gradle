@@ -89,12 +89,12 @@ groovydoc {
     exclude "test/**/**"
 }
 
-sourcesJar {
-    exclude "test/**"
-    exclude "test/**/**"
-
-    classifier = 'sources'
-}
+//sourcesJar {
+//    exclude "test/**"
+//    exclude "test/**/**"
+//
+//    classifier = 'sources'
+//}
 
 dependencies {
     provided 'org.springframework.boot:spring-boot-starter-logging'
