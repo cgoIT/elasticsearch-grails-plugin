@@ -21,8 +21,7 @@ buildscript {
 }
 
 plugins {
-    id "com.jfrog.bintray" version "1.8.5"
-    id "com.jfrog.artifactory" version "4.9.8"
+    id 'maven-publish'
     id "de.undercouch.download" version "4.0.0"
     id "cgoit.gradle.elasticsearch" version "0.2.2"
     id "com.dorongold.task-tree" version "1.5"
@@ -34,7 +33,6 @@ group "grails.plugins"
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "org.grails.grails-plugin"
-apply plugin: "org.grails.grails-plugin-publish"
 apply plugin: "org.grails.grails-gsp"
 apply plugin: 'maven-publish'
 apply plugin: 'com.github.ben-manes.versions'
