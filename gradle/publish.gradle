@@ -6,39 +6,39 @@ ext {
     repoName = rootProject.name
 }
 
-apply plugin: "maven-publish"
-def nexusUser = System.getenv("NEXUS_USER") ?: project.cgoitNexusUsername
-def nexusPassword = System.getenv("NEXUS_PASSWORD") ?: project.cgoitNexusPassword
+apply plugin: 'com.bmuschko.nexus'
 def nexusBase = System.getenv("NEXUS_BASE") ?: project.cgoitNexusBase
-publishing.repositories {
-    maven {
-        credentials {
-            username "${nexusUser}"
-            password "${nexusPassword}"
-        }
-
-        url = "$nexusBase/repository/grails-plugins"
-    }
-}
-
-publishing.publications {
-    grailsElasticsearchPlugin(MavenPublication) {
-        afterEvaluate {
-            artifactId = project.name
-            version project.version
-            from components.java
-            artifact sourcesJar
-            pom {
-                description = """Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable 
+modifyPom {
+    project {
+        name 'Elasticsearch Grails Plugin'
+        description """Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable 
 full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in 
 Java and is released as open source under the terms of the Apache License. 
 This is the Grails 3 plugin to support Elasticsearch up to Version 7.7.1."""
-            }
+        url 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'
+
+        scm {
+            connection = 'scm:git:git://github.com/cgoIT/elasticsearch-grails-plugin.git'
+            developerConnection = 'scm:git:git://github.com/cgoIT/elasticsearch-grails-plugin.git'
+            url = 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'
         }
     }
 }
 
-publish.dependsOn = [sourcesJar, docs]
+extraArchive {
+    sources = false
+    tests = true
+    javadoc = false
+}
+
+nexus {
+    sign = true
+    repositoryUrl = "$nexusBase/repository/grails-plugins"
+    snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins"
+
+    nexusUsername = System.getenv("NEXUS_USER") ?: project.cgoitNexusUsername
+    nexusPassword = System.getenv("NEXUS_PASSWORD") ?: project.cgoitNexusPassword
+}
 
 githubPages {
     repoUri = 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'
