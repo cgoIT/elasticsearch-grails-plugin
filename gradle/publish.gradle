@@ -7,6 +7,8 @@ ext {
 }
 
 apply plugin: 'com.bmuschko.nexus'
+project.nexusUsername = System.getenv("NEXUS_USER") ?: project.cgoitNexusUsername
+project.nexusPassword = System.getenv("NEXUS_PASSWORD") ?: project.cgoitNexusPassword
 def nexusBase = System.getenv("NEXUS_BASE") ?: project.cgoitNexusBase
 modifyPom {
     project {
@@ -35,9 +37,6 @@ nexus {
     sign = true
     repositoryUrl = "$nexusBase/repository/grails-plugins"
     snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins"
-
-    nexusUsername = System.getenv("NEXUS_USER") ?: project.cgoitNexusUsername
-    nexusPassword = System.getenv("NEXUS_PASSWORD") ?: project.cgoitNexusPassword
 }
 
 githubPages {
