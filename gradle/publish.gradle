@@ -36,8 +36,10 @@ extraArchive {
 nexus {
     sign = true
     repositoryUrl = "$nexusBase/repository/grails-plugins"
-    snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins"
+    snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins-snapshots"
 }
+
+publish.dependsOn(check, uploadArchives)
 
 githubPages {
     repoUri = 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'

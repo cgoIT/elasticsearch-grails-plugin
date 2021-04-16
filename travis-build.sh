@@ -21,7 +21,7 @@ if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST
 
   if [[ -z $(echo $VERSION | grep "SNAPSHOT") ]]; then
     echo "Publishing archives for branch $TRAVIS_BRANCH"
-    ./gradlew uploadArtifacts || EXIT_STATUS=$?
+    ./gradlew publish || EXIT_STATUS=$?
   fi
 
   ./publish-docs.sh
