@@ -22,7 +22,7 @@ buildscript {
 }
 
 plugins {
-    id 'maven-publish'
+    //id 'maven-publish'
     id "de.undercouch.download" version "4.0.0"
     id "cgoit.gradle.elasticsearch" version "0.2.2"
     id "com.dorongold.task-tree" version "1.5"
@@ -113,7 +113,6 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
 
     compile "org.apache.logging.log4j:log4j-api:2.13.3"
-    compile "org.apache.logging.log4j:log4j-core:2.13.3"
 
     compile "org.elasticsearch:elasticsearch:${esVersion}"
     compile "org.elasticsearch.client:elasticsearch-rest-high-level-client:${esVersion}"
@@ -125,9 +124,9 @@ dependencies {
 
     testRuntime "com.spatial4j:spatial4j:0.4.1"
     testRuntime "org.apache.tomcat:tomcat-jdbc"
+    testRuntime "org.apache.logging.log4j:log4j-core:2.13.3"
 
     testCompile "org.grails:grails-gorm-testing-support"
-    testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails:grails-web-testing-support"
 
     testCompile "com.vividsolutions:jts:1.13"
