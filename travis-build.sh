@@ -24,7 +24,7 @@ if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST
     ./gradlew publish || EXIT_STATUS=$?
   fi
 
-  ./publish-docs.sh
+  #./publish-docs.sh
 fi
 
 exit $EXIT_STATUS
