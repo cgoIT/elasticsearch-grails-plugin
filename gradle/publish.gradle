@@ -39,7 +39,7 @@ extraArchive {
 
 
 nexus {
-    sign = true
+    sign = false
     repositoryUrl = "$nexusBase/repository/grails-plugins"
     snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins-snapshots"
 }
