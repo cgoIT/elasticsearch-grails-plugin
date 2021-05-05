@@ -4,47 +4,55 @@ apply plugin: "org.ajoberstar.github-pages"
 ext {
     githubApiKey = System.getenv("GH_TOKEN")
     repoName = rootProject.name
+    nexusBase = "https://nexus.cgo-it.de/repository"
     nexusUsername = System.getenv("NEXUS_USER") ?: rootProject.cgoitNexusUsername
     nexusPassword = System.getenv("NEXUS_PASSWORD") ?: rootProject.cgoitNexusPassword
 }
 
-apply plugin: 'com.bmuschko.nexus'
-//rootProject.nexusUsername = System.getenv("NEXUS_USER") ?: rootProject.cgoitNexusUsername
-//rootProject.nexusPassword = System.getenv("NEXUS_PASSWORD") ?: rootProject.cgoitNexusPassword
-def nexusBase = System.getenv("NEXUS_BASE") ?: rootProject.cgoitNexusBase
+publishing.repositories {
+    maven {
+        credentials {
+            username "${nexusUsername}"
+            password "${nexusPassword}"
+        }
 
-modifyPom {
-    project {
-        name 'Elasticsearch Grails Plugin'
-        description """Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable 
+        def releasesRepoUrl = "$nexusBase/grails-plugins"
+        def snapshotsRepoUrl = "$nexusBase/grails-plugins-snapshots"
+        url = "SNAPSHOT" in project.version ? snapshotsRepoUrl : releasesRepoUrl
+    }
+}
+
+publishing.publications {
+    elasticsearch(MavenPublication) {
+        afterEvaluate {
+            artifactId = project.name
+            version project.version
+            from components.java
+            artifact sourcesJar
+            pom {
+                description = """Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable 
 full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in 
 Java and is released as open source under the terms of the Apache License. 
 This is the Grails 3 plugin to support Elasticsearch up to Version 7.7.1."""
-        url 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'
-
-        scm {
-            connection = 'scm:git:git://github.com/cgoIT/elasticsearch-grails-plugin.git'
-            developerConnection = 'scm:git:git://github.com/cgoIT/elasticsearch-grails-plugin.git'
-            url = 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'
+            }
         }
     }
 }
 
-extraArchive {
-    sources = false
-    tests = true
-    javadoc = false
+grailsPublish {
+    githubSlug = 'cgoIT/elasticsearch-grails-plugin'
+    license {
+        name = 'Apache-2.0'
+    }
+    title = "Elasticsearch Grails Plugin"
+    desc = """Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable 
+full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in 
+Java and is released as open source under the terms of the Apache License. 
+This is the Grails 3 plugin to support Elasticsearch up to Version 7.7.1."""
+    developers = [noam: 'Noam Y. Tenne', macrcos: 'Marcos Carceles', puneet: 'Puneet Behl', james: 'James Kleeh', cgoit: 'Carsten Götzinger']
 }
 
-
-
-nexus {
-    sign = false
-    repositoryUrl = "$nexusBase/repository/grails-plugins"
-    snapshotRepositoryUrl = "$nexusBase/repository/grails-plugins-snapshots"
-}
-
-publish.dependsOn(check, uploadArchives)
+publish.dependsOn = [sourcesJar, build]
 
 githubPages {
     repoUri = 'https://github.com/cgoIT/elasticsearch-grails-plugin.git'

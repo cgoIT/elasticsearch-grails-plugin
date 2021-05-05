@@ -17,7 +17,7 @@ buildscript {
         classpath 'org.ajoberstar:gradle-git:1.7.2'
         classpath "org.grails.plugins:hibernate5:${gormVersion - ".RELEASE"}"
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.25.0'
-        classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.0.10"
     }
 }
 
@@ -34,7 +34,9 @@ group "grails.plugins"
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "org.grails.grails-plugin"
+apply plugin: "org.grails.grails-plugin-publish"
 apply plugin: "org.grails.grails-gsp"
+apply plugin: "asset-pipeline"
 apply plugin: 'maven-publish'
 apply plugin: 'com.github.ben-manes.versions'
 
@@ -87,6 +89,10 @@ jar {
 groovydoc {
     exclude "test/**"
     exclude "test/**/**"
+}
+
+assets {
+    packagePlugin = true
 }
 
 //sourcesJar {
